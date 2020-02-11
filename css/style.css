@@ -49,7 +49,7 @@ body .main-container .content-container .text-content {
 
 @media (max-width: 575px) {
   body .main-container .content-container .text-content {
-    margin-bottom: 24rem;
+    margin-bottom: 18rem;
     padding: 2rem 1rem;
   }
 }
@@ -126,16 +126,6 @@ body .main-container .content-container footer .footer-left-column {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 2rem;
-  }
-}
-
-body .main-container .content-container footer .footer-left-column img {
-  margin-right: 1rem;
-}
-
-@media (max-width: 575px) {
-  body .main-container .content-container footer .footer-left-column img {
-    margin: 0 0 1rem 0;
   }
 }
 
