@@ -1,0 +1,122 @@
+$basic-font-color: #707070;
+$light-font-color: #b1b1b1;
+$light-background-color: #f5f5f5;
+$basic-green-color: #00d573;
+
+@mixin size-575px {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light-background-color;
+  font-family: Montserrat;
+  color: $basic-font-color;
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    .content-container {
+      min-width: 300px;
+      max-width: 670px;
+      min-height: 600px;
+      width: 90%;
+      background-color: #fff;
+      border-radius: 5px;
+      border-top: 5px solid $basic-green-color;
+      position: relative;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+
+      .text-content {
+        padding: 2rem 3rem;
+        margin-bottom: 9rem;
+        @include size-575px {
+          margin-bottom: 24rem;
+          padding: 2rem 1rem;
+        }
+
+        p {
+          line-height: 30px;
+          padding: 1rem;
+        }
+
+        .title-container {
+          text-align: center;
+          p {
+            color: $light-font-color;
+          }
+        }
+      }
+      footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 4rem;
+        background-color: $basic-green-color;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0 0 5px 5px;
+
+        @include size-575px {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        p {
+          padding: 0.3rem 0;
+        }
+
+        .bold-paragraph {
+          font-weight: 600;
+        }
+
+        .footer-left-column {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include size-575px {
+            flex-direction: column;
+            margin-bottom: 2rem;
+          }
+
+          img {
+            margin-right: 1rem;
+            @include size-575px {
+              margin: 0 0 1rem 0;
+            }
+          }
+        }
+
+        .footer-right-column {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          @include size-575px {
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .logo-container {
+      margin-bottom: 3rem;
+    }
+  }
+}
